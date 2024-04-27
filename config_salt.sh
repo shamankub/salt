@@ -14,6 +14,7 @@ print_msg() {
 read -p "Какой тип компьютера вы хотите сконфигурировать? master[1] / minion[2] >> " computer_type
 
 if [ "$computer_type" == "1" ]; then
+    ifconfig | grep "inet addr"
     read -p "Введите ip-адрес для interface (например, 127.0.0.1) >> " interface
     read -p "Введите значение для user (например, root) >> " user
     # Добавляем строки в файл /etc/salt/master.d/master.conf
