@@ -39,6 +39,5 @@ fi
 print_msg "INFO" "Перезапуск сервисов..."
 systemctl restart salt-master.service || { print_msg "ERROR" "Не удалось перезапустить salt-master.service"; }
 systemctl restart salt-minion.service || { print_msg "ERROR" "Не удалось перезапустить salt-minion.service"; }
-systemctl restart salt-api.service || { print_msg "ERROR" "Не удалось перезапустить salt-api.service"; }
 
 print_msg "INFO" "Конфигурирование завершено..."
